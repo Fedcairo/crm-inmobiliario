@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-light: #6366F1;
+  --primary-dark: #4F46E5;
+  --background: #FFFFFF;
+  --surface: #F8FAFC;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --border: #E2E8F0;
+}
+
+[data-theme="dark"] {
+  --primary-light: #4338CA;
+  --primary-dark: #3730A3;
+  --background: #0F172A;
+  --surface: #1E293B;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --border: #334155;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.semi-neon-btn {
+  @apply text-white border transition-all ease-in-out duration-300;
+  background-image: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+  border-color: var(--primary-light);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.semi-neon-btn:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+  transform: translateY(-2px);
+}
+
+.green-dot {
+  width: 8px;
+  height: 8px;
+  background: #22C55E;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  border: 2px solid white;
+}
+
+.robot-indicator, .human-indicator {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.robot-indicator {
+  color: var(--primary-light);
+}
+
+.human-indicator {
+  color: #059669;
+}
